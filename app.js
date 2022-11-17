@@ -5,6 +5,7 @@ import { renderPosts } from './render-utils.js';
 /* Get DOM Elements */
 const cardCont = document.getElementById('cards-container');
 const createBtn = document.getElementById('create-btn');
+const logInBtn = document.getElementById('login-btn');
 /* State */
 
 /* Events */
@@ -14,6 +15,10 @@ window.addEventListener('load', async () => {
 
 createBtn.addEventListener('click', () => {
     window.location = '/create';
+});
+
+logInBtn.addEventListener('click', () => {
+    window.location = '/auth';
 });
 
 /* Display Functions */
