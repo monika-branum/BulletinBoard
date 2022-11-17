@@ -7,7 +7,6 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 //home page//
 export async function fetchPosts() {
     const response = await client.from('bulletin').select('*');
-    console.log(response.data);
     return response.data;
 }
 //auth//
