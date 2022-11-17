@@ -1,6 +1,6 @@
 /* Imports */
 import { fetchPosts } from './fetch-utils.js';
-fetchPosts();
+import { renderPosts } from './render-utils.js';
 
 /* Get DOM Elements */
 const cardCont = document.getElementById('cards-container');
