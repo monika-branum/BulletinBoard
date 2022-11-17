@@ -1,3 +1,5 @@
+import { createNewPost } from '../fetch-utils.js';
+
 const formEl = document.getElementById('form-create');
 
 formEl.addEventListener('submit', async (e) => {
@@ -9,4 +11,6 @@ formEl.addEventListener('submit', async (e) => {
         description: data.get('description'),
         contact: data.get('contact'),
     };
+    const response = await createNewPost(newPost);
+    window.location = '../index.html';
 });

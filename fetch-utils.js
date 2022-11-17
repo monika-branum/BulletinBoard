@@ -9,4 +9,15 @@ export async function fetchPosts() {
     const response = await client.from('bulletin').select('*');
     return response.data;
 }
+
+//create page//
+
+export async function createNewPost(post) {
+    const response = await client.from('bulletin').insert(post);
+    if (response.data) {
+        return response.data;
+    } else {
+        console.error(response.error);
+    }
+}
 //auth//
