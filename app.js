@@ -4,12 +4,18 @@ import { renderPosts } from './render-utils.js';
 
 /* Get DOM Elements */
 const cardCont = document.getElementById('cards-container');
+const createBtn = document.getElementById('create-btn');
 /* State */
 
 /* Events */
 window.addEventListener('load', async () => {
     await displayPosts();
 });
+
+createBtn.addEventListener('click', () => {
+    window.location = '/create';
+});
+
 /* Display Functions */
 async function displayPosts() {
     const posts = await fetchPosts();
