@@ -1,4 +1,6 @@
 /* Imports */
+import { fetchPosts } from './fetch-utils.js';
+fetchPosts();
 
 /* Get DOM Elements */
 
