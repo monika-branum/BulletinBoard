@@ -23,5 +23,35 @@ export async function createNewPost(post) {
 //auth//
 export async function signInUser(email, password) {
     const response = await client.auth.signIn({ email, password });
+
     return response.user;
+}
+
+export function getUser() {
+    return client.auth.session() && client.auth.session().user;
+}
+
+export async function redirectIfLoggedIn() {
+    const user = getUser();
+
+    if (user) location.replace('../create');
+}
+
+export function checkAuth() {
+    const user = getUser();
+    if (!user) location.replace('/');
+}
+
+export async function signUpUser(email, password) {
+    const response = await client.auth.signUp({ email, password });
+    if (response.user) {
+        return response.user;
+    } else {
+        console.error(response.error);
+    }
+}
+
+export async function logOut() {
+    await client.auth.signOut();
+    return (window.location.href = '/');
 }

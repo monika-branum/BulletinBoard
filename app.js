@@ -1,11 +1,13 @@
 /* Imports */
-import { fetchPosts } from './fetch-utils.js';
+import { fetchPosts, logOut } from './fetch-utils.js';
 import { renderPosts } from './render-utils.js';
 
 /* Get DOM Elements */
 const cardCont = document.getElementById('cards-container');
 const createBtn = document.getElementById('create-btn');
 const logInBtn = document.getElementById('login-btn');
+const logOutBtn = document.getElementById('logout-btn');
+
 /* State */
 
 /* Events */
@@ -19,6 +21,10 @@ createBtn.addEventListener('click', () => {
 
 logInBtn.addEventListener('click', () => {
     window.location = '/auth';
+});
+
+logOutBtn.addEventListener('click', () => {
+    logOut();
 });
 
 /* Display Functions */
