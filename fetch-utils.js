@@ -39,7 +39,7 @@ export async function redirectIfLoggedIn() {
 
 export function checkAuth() {
     const user = getUser();
-    if (!user) location.replace('/');
+    if (!user) location.replace('/auth');
 }
 
 export async function signUpUser(email, password) {

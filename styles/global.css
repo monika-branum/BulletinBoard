@@ -31,5 +31,61 @@ header .logo {
 }
 
 main {
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-image: url('../assets/background.jpg');
+    padding: 5px;
+}
+
+#cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    height: 75vh;
+    width: 75vw;
+}
+
+.card {
+    border: solid black 1px;
+    margin: 5px;
+    padding: 15px;
+    height: 350px;
+    max-width: 900px;
+    background-image: url('../assets/post-bg.jpg');
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+}
+
+.card p,
+h2 {
+    font-family: 'Comic Sans MS';
+    background: rgb(224, 234, 247, 0.5);
+}
+
+.card p {
+    font-size: 2rem;
+}
+.card h2 {
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+.create-div {
+    display: flex;
+    justify-content: center;
+}
+
+#form-create {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background: rgb(224, 234, 247, 0.5);
+    font-size: 2rem;
+}
+
+#form-create label {
+    margin: 20px;
 }
