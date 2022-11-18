@@ -11,7 +11,6 @@ export async function fetchPosts() {
 }
 
 //create page//
-
 export async function createNewPost(post) {
     const response = await client.from('bulletin').insert(post);
     if (response.data) {
@@ -20,4 +19,9 @@ export async function createNewPost(post) {
         console.error(response.error);
     }
 }
+
 //auth//
+export async function signInUser(email, password) {
+    const response = await client.auth.signIn({ email, password });
+    return response.user;
+}
