@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+
+        <!-- js -->
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+        ></script>
+
+        <script type="module" src="app.js"></script>
+        <title>Avengers Assemble</title>
+
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
+
+        <!-- css -->
+        <link rel="stylesheet" href="../styles/reset.css" />
+        <link rel="stylesheet" href="../styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
+
+    <body>
+        <header><a href="../index.html">Go Home</a></header>
+
+        <main>
+            <div class="signin-container card">
+                <form id="signin-form" class="form">
+                    SIGN IN
+                    <label>
+                        Email:
+                        <input id="signin-email" name="email" type="text" />
+                    </label>
+                    <label>
+                        Password:
+                        <input id="signin-password" name="password" type="text" />
+                    </label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="signup-container card">
+                <form id="signup-form" class="form">
+                    SIGN UP
+                    <label>
+                        Email:
+                        <input id="signup-email" name="email" type="text" />
+                    </label>
+                    <label>
+                        Password:
+                        <input id="signup-password" name="password" type="text" />
+                    </label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

@@ -23,21 +23,34 @@
         <!-- see https://fonts.google.com/ -->
 
         <!-- css -->
-        <link rel="stylesheet" href="styles/reset.css" />
-        <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" href="../styles/reset.css" />
+        <link rel="stylesheet" href="../styles/global.css" />
         <!-- add link for page specific css -->
     </head>
 
     <body>
         <header>
-            <h1>Avengers Assemble</h1>
-            <button id="login-btn">Login</button>
-            <button id="create-btn">Create</button>
+            <a href="../index.html">Go Home</a>
             <button id="logout-btn">Log Out</button>
         </header>
-
         <main>
-            <div id="cards-container"></div>
+            <div class="create-div card">
+                <form id="form-create" class="form">
+                    <label
+                        >Title:
+                        <input id="title-input" name="title" type="text" />
+                    </label>
+                    <label
+                        >Description:
+                        <input id="description-input" name="description" type="text" />
+                    </label>
+                    <label
+                        >Contact:
+                        <input id="contact-input" name="contact" type="text" />
+                    </label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </main>
     </body>
 </html>
